@@ -22,7 +22,7 @@
 | %    | Mod            |
 | **   | Power          |
 
-### Variable Assignments
+## Variable Assignments
 - To define a variable 
 ```python
  variablename = 2 
@@ -43,7 +43,7 @@
 - For indexing variablename[index].
 - For slicing variablename[StartIndex:EndIndex:Steps].
 - mystring[::-1] reverses a string.
-- 
+
 ```python
  indexSlicing = "Anas Kayra"
  print(indexSlicing[0]) # A
@@ -81,5 +81,91 @@
 
 #### Strings Properties
 - Strings are immutable.
-- + is used to add strings together.
-- * is used to multiply strings.
+- \+ is used to add strings together.
+- \* is used to multiply strings.
+
+#### Print Formatting with Strings
+2 Methods:
+- .format() method 
+String String {} String String {}.format('variableToBeInserted1','variableToBeInserted2')
+Can also use index position for example:
+
+```python
+myname = "Anas/Kayra"
+myjob = "Computer Scientist"
+myage = "21"
+
+print("Hello my name is {} I am a {} and I am {} years old".format(myname, myjob, myage)) # Hello my name is Anas/Kayra I am a Computer Scientist and I am 21 years old
+
+#can also use index, like this:
+print("Hello my name is {0} I am a {1} and I am {2} years old".format(myname, myjob, myage)) # Hello my name is Anas/Kayra I am a Computer Scientist and I am 21 years old
+
+# can also use keywords, like this:
+print("Hello my name is {a} I am a {b} and I am {c} years old".format(a = myname, b = myjob, c = myage))
+
+ ```
+
+- f-strings (formatted string literals)
+Similar to .format() but different implementation 
+
+```python
+myname = "Anas/Kayra"
+myjob = "Computer Scientist"
+myage = "21"
+
+print(f"Hello my name is {myname} I am a {myjob} and I am {myage} years old") # Hello my name is Anas/Kayra I am a Computer Scientist and I am 21 years old
+ ```
+
+- .format() method can be also used for floats formatting, it can adjust the width and precision.
+
+```python
+myage = "21"
+
+result = 21/9 #2.33333333
+print("The result is {x:10.3f}".format(x = result)) # will make the size the result takes 10 it will fill the rest with white space and then it will be up to 3 decimal points.
+
+ ```
+ 
+ 
+ ### Lists
+ - Lists are ordered sequences of objects.
+ - Uses [] and , to seperate the objects.
+ - Supports indexing and slicing.
+ - Can have different types of objects.
+ - Can add two lists together using +.
+ - .append(object) is used to add a new object to the end of the list.
+ - .pop(index) is used to remove the object with the index specified from the list, if an index wasn't provided the last element in the list will be removed (it returns the object popped).
+ - Reverse indexing also works in lists.
+ - .sort() sorts the list in alphabetical order (it doesn't return anything).
+ - .reverse() sorts the list in the reverse order (returns nothing as well).
+
+
+
+### Dictionaries
+- Unordered mappings for objects and keys.
+- Uses {} and : to assign the key, {'key1':'value1','key2':'value2'} d['key1'] will return 'value1'.
+- Can have different types of objects.
+- Can be nested/stacked.
+- dictionary.key() returns all the keys in the dictionary.
+- dictionary.values() returns all the values in the dictionary.
+- d.items() returns all the keys and values in the dictionary together.
+
+
+### Tuples
+- Similar to lists but it's immutable (can't be changed).
+- it uses () instead of [].
+- tuple.count('string') returns how many times this string occured in the tuple.
+- tuple.index('string') returns the index of the first occurrence of string.
+
+### Sets
+- They are unordered collections of unique elements.
+- Same object can occur only once in the set.
+- set.add(object) addes object to the end of the set.
+- adding the same object willn't result in an error but it won't be added/repeated.
+- set(list) can be used to get unique items in a list.
+
+### Booleans
+- True or False
+
+
+## Input/Output with Basic Files
