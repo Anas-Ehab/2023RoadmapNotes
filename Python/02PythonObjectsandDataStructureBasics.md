@@ -169,3 +169,21 @@ print("The result is {x:10.3f}".format(x = result)) # will make the size the res
 
 
 ## Input/Output with Basic Files
+- myfile = open('filename') is used to open a file.
+- myfile.read() returns all string in the file with \n being a new file.
+- retyping the myfile.read() command will return null because the cursor is at the end of the file use myfile.seek(0) to get the cursor back to the start of the file.
+- myfile.readlines() returns each line as an element of its own.
+- to open a text file that's not in the same directory use the full path.
+- myfile.close() is used to close the file.
+- It's best practice to use with open('filename') as my_new_file: then you type enter and you can type commands to edit the file and not care about closing it.
+- the default of the open function is read-only to be able to write use mode='w' so the command will be open('filename', mode='w').
+- myfile.write('text to add') is used to write to a file.
+
+### File Modes
+| Name  | Description                                            |
+| ------|--------------------------------------------------------|
+| r     | Read only                                              |
+| w     | Write only                                             |
+| a     | Append (add to the file)                               |
+| r+    | Read & Write                                           |
+| w+    | Write and Read (will overwrite or create a new file)   |
